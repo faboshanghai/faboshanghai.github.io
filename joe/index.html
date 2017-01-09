@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy X - China</title>
+    <title>Maker Space of Joe</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,9 +35,8 @@
     <!-- Load the menu file -->
     <script>
 	function menu() {
-					  $('#websites').load("websites-menu.html");
+					  $('#exercises').load("exercises-menu.html");
 					  $('#project').load("project-menu.html");
-					  $('#cclicense').load("license.html");
 					  $('#cclicense').load("license.html");
 					  }
 	</script>
@@ -56,53 +55,58 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand" href="index.html">Maker Space of Joe</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-          
+            <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Student Websites<span class="caret"></span></a>
-              <ul id="websites" class="dropdown-menu" role="menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises<span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
-
-            
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container"
+    style="text-align:justify">
 
 	<!-- Insert your content here below! -->
 
       <div class="jumbotron">
-        <h2>Fab Academy X - China</h2>
-        <p>
-    		A three week course into digital manufacturing and rapid prototyping, organized by Fablab O Shanghai. The students learn how to envision, prototype and document their ideas through many hours of hands-on experience with digital fabrication tools.   
+        <h1>Welcome to Maker Space of Joe</h1>
+        <p style="color:DarkSeaGreen;margin-left:20px;text-indent: 2em">
+        Hello,I'Joe.I come from Beijing to participate in the training of FabLab in Shanghai.First,I have to thank my teacher,<a href="http://www.fabacademy.org/archives/2015/eu/students/silli.saverio/index.html">Saverio Silli</a>.He teach me how to use the equipments,such as laser cutting machine,high precision 3D printing,3D scanning instrument,CNC digital machine tools,etc,and the method of thinking in the Fablab Shanghai.The Fablab is an open shared space,it's open to people in the society to share ideas to people around the world.So I will show you what I have learn in the exercises of title column.As long as you have originality and dream,the Fablab will give you a stage to show your creative.
         </p>
 		
       </div>
       
       <div class="row">
         <div class="col-lg-4">
-          <h2>The Course</h2>
-          <p>Fab Academy X - China, is a 3 week course into digital manufacturing and rapid prototyping, organized by Fablab O Shanghai. The students learn how to envision, prototype and document their ideas through many hours of hands-on experience with digital fabrication tools.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
+          <div><h2>Learning Skills</h2>
+          <p>In this part,you can learn how to design and make a product,but also learn programming to control your products.It's a infinite space where you should be here.<img src="img/fablab.jpg" width="350" height="235"> </p></div>
+          <p><a class="btn btn-primary" href="learning skills.html" role="button">View more &raquo; </a> </p>
         </div>
-         <div class="col-lg-4">
-          <h2>Student Websites</h2>
-          <p>Here you can find the websites the students of Fab Academy X - China have built during the 3 weeks' course to document and share their personal work.</p>
-          <p><a class="btn btn-primary" href="websites-menu.html" role="button">View more &raquo;</a></p>
-        </div>
-		  <div class="col-lg-4">
-          <h2>Fablab O Shanghai</h2>
-          <p>As the first built and actively run Fablab in China, Fablab O Shanghai is founded by the College of Design and Innovation of Tongji University, located in Shanghai Design Center near TJAD (The Architectural Design and Research Institute of Tongji University).</p>
-          <p><a class="btn btn-primary" href="http://fablab.tongji.edu.cn/" role="button">View more &raquo;</a></p>
+        <div class="col-lg-4">
+          <div><h2>Share Products</h2>
+            <p>In this part,you can learn more about how to make a products.The tutorials include the source files of design,Parts list,schematic diagram and costs.<img src="img/fablabmusic.jpg" width="380"></p></div>
+          <p><a class="btn btn-primary" href="share products.html" role="button">View more &raquo;</a></p>
        </div>
-     
+        <div class="col-lg-4">
+          <h2>Space Carnival</h2>
+          <p>Laboratory is rich in daily activities.It has Open Day, training courses and large-scale carnival.You will grow up every day, and have a wonderful life.<img src="img/fablab3.jpg" width="350" height="235"></p>
+          <p><a class="btn btn-primary" href="space carnival.html" role="button">View more &raquo;</a></p>
+        </div>
       </div>
+		
+      
+    <h3>Would you like to insert more information about Makers?</h3>
+      <p>
+      Check the documentation of Bootstrap <a href="about.html">here</a>.
+      </p>
     <!-- End of your content -->
 
     </div> <!-- /container -->
@@ -113,7 +117,8 @@
         <p id="cclicense">
         </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> modified by Saverio Silli.
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy X</a> by <a href="http://openp2pdesign.org">Joe</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
     
@@ -140,6 +145,5 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-
   </body>
 </html>
