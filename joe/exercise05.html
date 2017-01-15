@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Exercise of Joe</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Maker Space of Joe</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -63,11 +63,6 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
             <li><a href="contact.html">Contact</a></li>
@@ -81,103 +76,25 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h1>3D Printing</h1>
     
-    <h3>Menu</h3>
+    <h3>Introduction</h3>
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+	Today,we hace learned there are several kinds of the 3D printing,such as SLA,DPL,SLS,FDM and ProJet.Their forming principle and material are different.The most commonly used printer is FDM,It means fuse deposition moulding,PLA is a good material for it.Then I designed a text model to 3D printed.Let's go to see what I have done.  
 	</p>
     
     
-    <h3>Text</h3>
+    <h3>3D Printing Text</h3>
 	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
+	First of all we need to have a document to be printed,I designed the text.stl to test the machine with use the rhino software.It's a rectangular 40*50mm,the other side is a 20mm diameter hole, and then I drawed three columns which have different tilt angles to measure the printer, and find the appropriate angle when it is printed on the inclined column. <br><br>
+	My text model:
 	<canvas id="cv" width=640 height=480>
 	It seems you are using an outdated browser that does not support canvas :-(
 	</canvas>
 	<script type="text/javascript">
 		var canvas = document.getElementById('cv');
 		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('SceneUrl','media/joetest.stl');
 		viewer.setParameter('ModelColor','#CAA618');
 		viewer.setParameter('BackgroundColor1','#E5D7BA');
 		viewer.setParameter('BackgroundColor2','#383840');
@@ -188,29 +105,52 @@
 		viewer.init();
 		viewer.update();
 	</script> 
-    </p> 
-    
+	<h3>How to Print</h3>
+	<p>
+	We used the Makerbot Replicator2 to print our models, you need to use its proprietary slicing software Makerbot Desktop slice it layers and layers.We need to chosen model name of your printer,and set up the hight of layer,speed,tempreture and fill. These settings will affect your print quality and time.<p class="pic"><img src="img/makerbotdesktop1.png"></p><p class="pic"><img src="img/makerbotdesktop2.png"></p>
+	After that we can print preview, then make sure there is no problem to save the file to X3G format,the file format of this printer is exclusive, normally it can be saved as Gcode file into the printer to print.<p class="pic"><img src="img/makerbotdesktop3.png"></p>
+	We have stored files transferred to the SD card,need to pay attention to is that we can use the data line directly to the computer connected with the printer ,but the risk is that if the data line accidentally disconnected,the printer will stop working,so we adopt off-line printing way.We select the file in the SD card and start printing.The printer would work when the temperature reaches the set temperature.<br>
+    <p style align="center">
+    <video width="800" height="600" controls="controls">
+  <source src="media/3dprinting.mp4" type="video/mp4" />
+</video>
+</p>
+There is a problem, that the print head is too close to the print platform so that the material can't be extruded with a noise "thump".The model is very difficult to take down. So we adjust the height of the platform to solve this problem, adjust four point of the platform and print head keep a distance of the thickness of a piece of paper, it can feel sense of resistance when we pull the piece of paper. Print my test again, the first layer can be released and easier to take down.
+	<h3>Result</h3>
+	<p>
+	The measurement of test size:length of 50mm measured an average of 49.8mm, up to 50.02mm,length of 40mm measured an average of 39.8mm, up to 40.03mm, circle of 20mm measured the diameter of 19.6mm, up to 19.65mm.
+	<div class="row">
+        <div class="col-lg-6">
+          <p style align="center"><img src="img/3Dtext.jpg" width="350" height="280">Designed model</p>
+        </div>
+        <div class="col-lg-6">
+          <p style align="center"><img src="img/3Dtextprint.jpg" width="350" >Printed model</p>
+        </div>
+    </div>
+	</p>
+	<h3>Expansion</h3>
+	The next day,I have printed my scan model,it is long 80mm wide 50mm high 100mm,it took 6 hours to print it out.Maybe there is a defect behind of the head in my design,so it's uneven.And the supports is difficult to tear down,I think it because of the ncorrect parameter setting.
+	<div class="row">
+        <div class="col-lg-6">
+          <p style align="center"><img src="img/3dprintjoe1.jpg" width="350" height="235">Defect of Supports</p>
+        </div>
+        <div class="col-lg-6">
+          <p style align="center"><img src="img/3dprintjoe2.jpg" width="350" height="235">Defect of Head</p>
+        </div>
+    </div>
     <h3>Download</h3>
 	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
+	This is my text model.
 	</p>
 	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
+	<a href="media/text.stl">
+	<button type="button" class="btn btn-primary btn-lg">Text Model</button>
 	</a>
 	</p>
       
-    <h3>Would you like to insert more style/elements?</h3>
+    <h3>Would you like to insert more information about Makers?</h3>
       <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
+      Please click <a href="about.html">here</a>.
       </p>
     <!-- End of your content -->
 
@@ -222,7 +162,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli </a>Edit by Joe <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>

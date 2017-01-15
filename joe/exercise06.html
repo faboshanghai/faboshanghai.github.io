@@ -8,11 +8,10 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Exercise of Joe</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
     
@@ -55,7 +54,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Maker Space of Joe</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -65,12 +64,7 @@
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
         </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -81,103 +75,66 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h2>Desktop CNC milling</h1>
     
-    <h3>Menu</h3>
+    <h3>Introduction</h3>
+	<p style="text-indent:2em;">
+	CNC is ubtractive manufacturing removing material.It can  make molds,mill out the part itself,circuit boards and so on.We have Learned the fundamentals of milling using the Roland milling machine to creat 3 dimensional parts.Designing a 3Dmodel,generating toolpaths and milling a finished object or mold of the model.
+	Softwares:Rhinoceros,Modela Player4,Roland VPanel for MDX-40A
+	Device:Roland MDX-40A
+	</p>
+    <h3>Design 3D model.</h3>
+	<p style="text-indent:2em">
+	You may be able to design a 3D model.However, the models used for CNC processing are special.The negative angle can not be set since the milling cutter can only come from the top, and it can not have a fine gully because of the tools is a certain diameter, it's unable to be processed if the ravine is less than the diameter. So I made a smooth surface and write "C+" on the model.It would be saved as STL.
+	<p class="pic"><img src="img/cncmodel.jpg"></p>
+	<h3>Main Parameters</h3>
+	<div style="text-indent:2em">
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+	Bbefore we generate tool path,we must understand the main parameters of the equipment.</p><p>
+	Feeds and Speeds:The speed at which we move a cutter across the material is called the “feed rate”. The rate of rotation is called the “speed” and is controlled by how fast the router or spindle turns the cutting tool.</p><p>
+	Chip load: is the thickness of a machined chip as cut by a speciﬁc tool type. More ﬂutes create a smoother surface ﬁnish, while fewer ﬂutes remove material fastest, but make rougher cuts. ~ 0.001-0.010" = feed rate (inches per minute) / (RPM x number of ﬂutes).</p><p>
+	Cut depth: How deep the tool cuts in to the material (Vertically) Rule of thumb is to use tool diameter.</p><p>
+	Step-over: How much will the tool overlap from previous path. Rule of thumb is tool diameter/2.</p><p>
+	Kerf, the tool has a thickness the amount of material being removed is called kerf.</p><p>
+	Rough/ﬁnish cuts: for removing material fast we start with a rough cut with a bigger tool. After that we run a ﬁnishing job smoothing the surface.</p><p>
+	T-bones:Since the end mill is round you can't have sharp inner corners.In a pocket one way of solving this is to make t-bones,another solution is to drill holes in each corner.</p><p>
+	Tabs:tabs are aded to hold the piece in place while cutting. </p><p>
+	lead-in, -out: Instead of just plunging the tool down and start cutting. The tools comes down on a slope.</p><p>
+	Test cuts, cutting air: run the job with the z axis offset to see everything works as it should.
 	</p>
-    
-    
-    <h3>Text</h3>
+	</div>
+    <p class="pic"><img src="img/cnctool.jpg">
+	<legend>CNC TOOL</legend>
+	</p>
+	<h3>Modela Player4</h3>
+	<div style="text-indent:2em">
 	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
+	I put the 3D model to the Modela Player4,we can click "rendering" to render the model,set the height,scale,and select the above removal of the model in "set>model",and then move the origin to the edge from the center in "origin".
+	Set new process:I chose the roughing,and selected the right tool(I used a ball milling cutter with a diameter of 5mm ),select all or partial to be milled,and then set different milling parameters according to material.Rigid foam insolation set like this:<p class="pic"><img src="img/roughing.png"></p>
+	Next,you can finish you set and preview.
+	Set another new process:I chose the finishing,and set like roughing,parameters of milling should be changed:<p class="pic"><img src="img/finishing.jpg"></p>
+	Finally,local preservation.
 	</p>
-	Result:
-	<p>
-	Your text here
+	</div>
+<h3>Roland VPanel for MDX-40A</h3>
+	<div style="text-indent:2em">
+	<p>Roland VPanel for MDX-40A is a software to control the CNC.First we need to open the Roland MDX-40A to open the VPanel,move the platform to the observation window, and use the double-sided adhesive tape to fix the foam on the platform.Install tool and step up.<p class="pic"><img src="img/Installtool.jpg" width="500" height="350"></p>
+	Then move the tool to machine zero,we can set the user zero now.We must to delete all the files in the machine,and add our file to the VPanel,then click the output to start milling.
+	<p class="pic"><img src="img/milling.jpg" width="500" height="350"></p>
+	We need to clean the milling waste when it works over.And then,we can add the finishing file.<p class="pic"><img src="img/cleaning.jpg" width="500" height="350"></p>
+	When it's over,it wouuld be like this.But there is a problem that it's too slose between "c" and "+", less than 5mm(tool's diameter),so they were still connected. <p class="pic"><img src="img/millingdone.jpg" width="500" height="350"></p>
 	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
+	</div>
 	
 	<h3>3D Model</h3>
 	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
+	It's the 3D model.
 	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
 	</canvas>
 	<script type="text/javascript">
 		var canvas = document.getElementById('cv');
 		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('SceneUrl','media/c.stl');
 		viewer.setParameter('ModelColor','#CAA618');
 		viewer.setParameter('BackgroundColor1','#E5D7BA');
 		viewer.setParameter('BackgroundColor2','#383840');
@@ -192,25 +149,17 @@
     
     <h3>Download</h3>
 	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
+	You can downloaded the file:
 	</p>
 	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
+	<a href="media/c.stl">
+	<button type="button" class="btn btn-primary btn-lg">C +</button>
 	</a>
 	</p>
       
-    <h3>Would you like to insert more style/elements?</h3>
+    <h3>Would you like to insert more information about Makers?</h3>
       <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
+      Please click <a href="about.html">here</a>.
       </p>
     <!-- End of your content -->
 
@@ -222,7 +171,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli </a>Edit by Joe <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
