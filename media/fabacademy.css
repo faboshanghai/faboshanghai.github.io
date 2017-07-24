@@ -1,4 +1,5 @@
 /* Custom CSS */
+h2 {color: #CA2459;}
 
 .license, #cclicense { 
 			font-size: 11px; 
@@ -8,6 +9,7 @@
 .license img, #cclicense { 
 			margin: 10px;
 		 }
+
 
 #cv {
   -webkit-border-radius: 14px;
