@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Name Surname">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2015 - Eric Ma</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Eric Ma</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+      
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+	<h3>Menu</h3>
+	<p>
+	Learn to use 3D Printer.
+	</p>
+    
+    
+    <h3>Electronic Design</h3>
+	<p> Using an electronic design software like Eagle to design or modify a simple board so that it includes at least a button and an LED with current-limiting resistor.</p>
+
+	<h3>Images</h3>
+  <p><img src="eric/images/9-6.jpg" width="600" height="450" alt=""/>      
+  <p> <center>According to the design needs to choose the right components to design the schematic diagram of the circuit. </center></p>
+	<p><img src="eric/images/9-21.jpg" width="600" height="450" alt=""/>      
+  <p> <center>According to the circuit schematic diagram of the PCB board, according to the design requirements of the original position, and the completion of the line generation, in the process to continuously adjust the connection line, to protect the 100% connectivity. </center></p>
+  <p><img src="eric/images/10-1.jpg" width="600" height="450" alt=""/>      
+  <p> <center>Using fabmodules to generate the cutting path diagram, and select the device SRM20, and then set the cutting parameters and start making the circuit board.</center> </p>
+  <p><img src="eric/images/9-18.jpg" width="600" height="450" alt=""/>      
+  <p> <center> Select the required components.</center>  </p>
+  <p><img src="eric/images/9-19.jpg" width="600" height="450" alt=""/>      
+  <p> <center>One of the original button is not, we hire a replacement, but it needs to be truncated some stitches. </center> </p>
+<p><img src="eric/images/9-7.jpg" width="600" height="450" alt=""/>      
+  <p> <center>Completed the original welding, we will connect it with FabISP, and initialize it. We use makefile to install the necessary files to the control chip.  </center></p>
+  <p><img src="eric/images/10-4.jpg" width="600" height="450" alt=""/>      
+  <p> <center>Now we can start programming, the use of Arduino programming, we have learned some of the basic syntax function, and C language is very similar, we can understand the characteristics and function of function parameters of chip speed, so you can quickly realize they want to do, I have through the switch LED control procedures, and the use of show the different colors of the RGB LED control function.</center></p>
+  <p><img src="eric/images/10-5.jpg" width="600" height="450" alt=""/>      
+  <p> <center>There is a picture is particularly important, it can help us quickly find the schematic diagram of the pin corresponding to the microcontroller pin position, we are using the Attiny44 microcontroller. </center></p>
+    
+    <h3>Download</h3>
+	
+	<p>
+	You can download by the button:
+	</p>
+	<p>
+	<a href="eric/files/bilun2.zip">
+	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
+	</a>
+	</p>
+      
+    <h3>&nbsp;</h3>
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+        </p>
+        <p style="text-align: center; font-size: 10px;"> Theme: <A href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</A> by <A href="http://openp2pdesign.org/">Massimo Menichinelli</A> modified by Eric Ma</p>
+        <p class="license">&nbsp;</p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>
