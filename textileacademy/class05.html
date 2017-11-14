@@ -85,14 +85,20 @@
 </nav>
 <!-- end of navigation bar -->
 
+
+      
+
+        
+        
+
     <div class="container theme-showcase" role="main">
 
       
 
 
  <div class="page-header">
-        <h1>Circular Open Source Fashion</h1>
-     <h2 style="color:black; margin-top:0; font-size:23px;">Class three - 10 October 2017</h2>
+        <h1>E-textiles &amp; Wearables I</h1>
+     <h2 style="color:black; margin-top:0; font-size:23px;">Class five - 24 October 2017</h2>
       </div>
         
         
@@ -102,137 +108,113 @@
 <div class="row">
       
 <div class="col-md-6">
-<h2>Researching traditional patterns</h2>
-<p>I started my assignment by making an online research for patterns often used in Chinese garments and fabrics. I also checked all my reference pictures from I have taken in history museums I visited and I asked my local colleagues. It came out that flowers and animals are used extensively in many styles and shapes. They all have some symbolic meaning and it is interesting to notice how the shapes sometimes follow the medium used to make the pattern. The magnolia flower is very characteristic of Shanghai and it is represented in many ways. It can be drawn using brushes and ink as in the traditional painting style (in this case the shape follows the way you move the brush where a single stroke is used to draw a petal) or it is often stylized in two dimensions, and it can be found on laquers or engravings.
+<h2>Making a slider potentiometer</h2>
+<p>I have some conductive fabric and some resistive film like velostat and I thought a slider potentiometer would be a nice exercise to start with. I based my project on some experience I made in a workshop during FAB13 with Wendy Neale and Ohad Meyuhas about soft sensors and <a href="http://www.kobakant.at/DIY/?p=6886">this documentation</a> I found on Kobakant's pages.<br><br>
+    First I tested the system with a Shanghaino (a simple Arduino clone I developed in Shanghai, based on the Fabschoolino from Waag Society) to check that my idea would work. The Conductive fabric strip is connected to an analog pin, while the two ends of the resistive film strip are connected to GND and VCC. Using a connector plated with adhesive copper foil I connect the two strips at different positions, determining a difference in the resistance on the two halves of the resistive film.
 </p>
-    <div class="thumbnail">
-<a href="image/03image00010.jpg">
-<img src="image/03image00010.jpg" alt="Lights" style="width:100%"> </a>
 
 </div>
+        
+    <div class="col-md-6">
+<br><br>
+<p>This is basically how a normal potentiometer works, you connect 5Volts to 0Volts with two variable resistors and the signal you pick in between the two resistor is called VoltageOut and it can be read by the Atmega's ADC (Analog to Digital Converter) giving you a scale of values between 0 and 1024. It's also the basic principle of a <a href="https://learn.sparkfun.com/tutorials/voltage-dividers">voltage divider</a>.
+</p>
+
 </div>
+        
+        </div>
 
-<div class="col-md-6">   
-
+                    <div class="row">
     
+    <div class="col-md-6">
+
 <div class="thumbnail">
-<a href="image/03image00009.jpg">
-<img src="image/03image00009.jpg" alt="Lights" style="width:100%"> </a>
+<a href="image/05image00004.jpg">
+<img src="image/05image00004.jpg" alt="Lights" style="width:100%"> </a>
 <div class="caption">
-<p> I traced an image in rhino and drew the basic lines of a five-petals magnolia flower.</p>
+<p>First test with a shanghaino</p>
 </div>
-</div>
+</div></div>
     
-</div>
-    
-</div>
+<div class="col-md-6">
 
+<div class="thumbnail">
+<a href="image/05image00002.jpg">
+<img src="image/05image00002.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>LED at full power (slider at right end)</p>
+</div>
+</div></div>
+    
+</div>
+        
+        
+        
+        
+                <div class="row">
+      
+
+
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/05image00008.jpg">
+<img src="image/05image00008.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>LED at low power (slider at left end)</p>
+</div>
+</div></div>
+            
+            
+                    
+                    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/05image00009.jpg">
+<img src="image/05image00009.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>ADC Voltage values in five position of the slider</p>
+</div>
+</div></div>
+                    
+        
+        </div>  
+        
+        
+        
+        
+        
+
+        
+        
 
   
 
         
 <!--                            CHAPTER 2-->
-        
-        
-        
-        <div class="row">   
 
-        
- 
-
-      
-<div class="col-md-6">
-
-<div class="thumbnail">
-<a href="image/03image00007.jpg">
-<img src="image/03image00007.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>Four patterns designed with Rhinoceros</p>
-</div>
-</div></div>
-    
-        
-   
-        <div class="col-md-6">
-<h2>Designing the modular pattern</h2>
-<p>The first consideration I made designing the modular tile is that using a pentagonal structure might have lessen the possible combinations in which the modules could be assembled. On the other hand, Magnolia Flowers are always represented with five petals... but I am not afraid of breaking the rules and I went for an exagonal structure nevertheless. The main concept in designing the module is that the petals have a cut in which you can slide and hold the piece that connects with the next module. The connection piece is the resulting shape between two adiacent petals. Also, I like that when the pieces are connected the petals should be made more visible by sticking out of the surface. But I would not know it that is true until I make a test cut.</p>
-</div></div> 
-                            <!--                            CHAPTER 3-->
         
         
 <div class="row">   
 <div class="col-md-12">
-<h2>Cut, test, modify. Cut, test, modify...</h2>
-<p>I moved to the laser cutter with four different designs and made a test cut on 3mm EVA foam. Meanwhile I ordered 3mm felt in white and grey color but I am waiting for it to be delivered. I discarded design #4 as it makes the tiles overlap too close to the respective centers. The shape of the connection cuts in design #2 create a very interesting effect that also allows for an esier insertion and tighter fit. I like the more stylized layout of design #3 and design #1 doesn't really have anything special.</p>
+<h2>Programming</h2>
+<p>The first code I tested was only printing the values on the serial monitor and then I added an LED to change its brightness. Later I switched the LED with an RGB LED and I assigned each one of the eight color achievable to eight location of the slider on the two strips by specifing appropriate values of voltage read by the ADC.</p>
 </div></div>         
         
-        <div class="row">
+
+      <div class="row">
       
-<div class="col-md-6">
+<div class="col-md-12">      
+       <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/tEoxdfp61gM?ecver=2" width="640" height="360" frameborder="0" gesture="media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
-<div class="thumbnail">
-<a href="image/03image00002.jpg">
-<img src="image/03image00002.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>Design #1</p>
 </div>
-</div></div>
-
-<div class="col-md-6">    
-<div class="thumbnail">
- <a href="image/03image00004.jpg">
-<img src="image/03image00004.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>Design #2</p>
-</div>
-</div></div>
-            
-            
-        
-        </div>  
+    
+</div>     
         
         
-                <div class="row">
-      
-<div class="col-md-6">
-
-<div class="thumbnail">
-<a href="image/03image00003.jpg">
-<img src="image/03image00003.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>Design #3</p>
-</div>
-</div></div>
-
-<div class="col-md-6">    
-<div class="thumbnail">
- <a href="image/03image00006.jpg">
-<img src="image/03image00006.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>Design #4</p>
-</div>
-</div></div>
-            
-            
+             
         
-        </div>
-        
-       <div class="row">   
-<div class="col-md-6">
-<p>Eventually I decided I will start over from #2 making it a little more simple. Also I got rid of any curved lines and rendered them with segments in order to speed up the lasercutting job. The new design has two types of modules, the largest number don't have features in the middle. Some of them have additional details in the center. I plan to cut the two types out of felt in two colors to have a contrasting effect (white for the simple one, grey for the special one, or the other way around).</p>
-</div>
-        
-           <div class="col-md-6">    
-<div class="thumbnail">
- <a href="image/03image00008.jpg">
-<img src="image/03image00008.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>New design layout, ready to be lasercut.</p>
-</div>
-</div></div>
-        
-        
-        </div>   
+  
         
                             <!--                            CHAPTER 4-->
         
@@ -241,32 +223,104 @@
         
 <div class="row">   
 <div class="col-md-8">
-<h2>Fabricating the modular kit</h2>
-<p>Delivery of the felt was delayed and only arrived a couple of hours before class. I will try to cut it and assemble it right now.</p>
+<h2>Electronic production</h2>
+<p>I designed a little board with Eagle and milled it on the Roland SRM-20 milling machine. The circuit uses an Attiny44, an RGB LED with appropriate resistors, an on-off switch and a 3.2Volts button battery.<br>
+    I programmed the SMD Attitiny inserting it to a spring plug connected to my FabISP and after that I soldered it to the PCB and completed soldering the other components.
+<br>I plan to complete this sensor giving it the shape of a bracelet where you can slide the buckle to change the color on your forearm based on which color you prefer to wear, so I called it a MoodBand.</p>
 </div></div>    
         
-        <div class="row">
+                        <div class="row">
       
+
+
 <div class="col-md-6">
 
 <div class="thumbnail">
-<a href="image/03image00008.jpg">
-<img src="image/03image00008.jpg" alt="Lights" style="width:100%"> </a>
+<a href="image/05image00001.jpg">
+<img src="image/05image00001.jpg" alt="Lights" style="width:100%"> </a>
 <div class="caption">
-<p>WIP</p>
+<p>Spring connector for Attiny44</p>
+</div>
+</div></div>
+            
+            
+                    
+                    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/05image00007.jpg">
+<img src="image/05image00007.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>ADC Voltage values in five position of the slider</p>
+</div>
+</div></div>
+                    
+        
+        </div>  
+                <div class="row">
+      
+
+
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/05image00005.jpg">
+<img src="image/05image00005.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>MoodBand displaying one color (don't ask me which color, I'm clorblind!)</p>
+</div>
+</div></div>
+            
+            
+                    
+                    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/05image00006.jpg">
+<img src="image/05image00006.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>MoodBand displaying another color at different position of the slider (I can only tell it's either Red, Blue, Green, Magenta, Cyan, Yellow, White or Black-Off)</p>
+</div>
+</div></div>
+                    
+        
+        </div>  
+        
+        
+                        <div class="row">
+      
+
+
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/05image00003.jpg">
+<img src="image/05image00003.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>Closer look at MoodBand</p>
 </div>
 </div></div>
 
-<div class="col-md-6">    
-<div class="thumbnail">
- <a href="image/03image00008.jpg">
-<img src="image/03image00008.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>WIP</p>
-</div>
+                    
+        
+        </div> 
+        
+        
+        
+        
+                  <div class="row">
+      
+
+                      
+                      <div class="col-md-12">      
+       <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/79Yhc-eg4q0?ecver=2" width="640" height="360" frameborder="0" gesture="media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 </div>
     
-</div></div>  
+</div>
+        
+        
+               
         
         
         
@@ -275,12 +329,6 @@
         
         
         
-        
-<div class="row">   
-<div class="col-md-8">
-<h2>Plans for dissemination</h2>
-<p>To be made.</p>
-</div></div> 
 
 
 
@@ -290,15 +338,7 @@
         
         
             
-               <div class="col-md-5">
-                   <h2>Files Storage</h2>
-          <div class="thumbnail" style="margin-top:0px">
-              <div class="caption">
-            <li><a href="https://gitlab.fabcloud.org/saveriosilli/fabricademy-saveriosilli">Rhino3D model</a></li>
-              <li><a href="https://gitlab.fabcloud.org/saveriosilli/fabricademy-saveriosilli">STL model</a></li>
-                  <li><a href="https://gitlab.fabcloud.org/saveriosilli/fabricademy-saveriosilli">DXF drawing</a></li>
-          </div>
-                   </div></div>
+
         
         
         
