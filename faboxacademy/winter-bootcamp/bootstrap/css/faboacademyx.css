@@ -1,0 +1,23 @@
+body {
+    
+    
+    font-family: 'Cabin', cursive;
+}
+
+
+/*This line changes the style of all the text in the body using google-font. If you want to change the style of the body, add the appropriate code here.*/
+
+
+img {border-radius: 15px;}
+.thumbnail {border-radius: 20px;}
+
+.imagebox {
+    position: relative;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
