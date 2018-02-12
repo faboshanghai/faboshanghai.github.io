@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+	      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	  
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/media/theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tony's Fablab</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+    
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Class 9:
+        Build the complete circuit and Program</h1>
+        <p>Since the mission this week is to build the core, we had searched many many things on the Internet and met different problems and did many changes! The content in this documentation might be a little bit more.</p>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Tools</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Shanghaiuno board</td>
+                <td>1</td>
+                <td>Arduino UNO is OK too</td>
+              </tr>
+              <tr>
+                      <td>2</td>
+                      <td>Potentialmeter</td>
+                      <td>5</td>
+                      <td>The number is determined by you</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Slient Buzzer</td>
+                <td>5</td>
+                <td>The number is the same as potentialmeter</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>Button</td>
+                  <td>1</td>
+                  <td>###</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td>LED light</td>
+                  <td>2</td>
+                  <td>Different colours</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>Wires</td>
+                  <td>Decided by you</td>
+                  <td>###</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>Breadboard</td>
+                  <td>1</td>
+                  <td>###</td>
+              </tr>
+            </tbody>
+          </table>
+          </div></div>
+        
+     <div class="page-header">
+        <h1>Step1:Figuring out the final piece</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+            <li><div class="panel-body">
+                <p style="margin-left: auto">We have done a very simple circuit to realize playing some simple music such as Happy Song. Then, this is our core, we need to plus some more features on it. Actually, what I want to finally present is an effector, which can change the output frequency by control some types of input.</p>
+                </div></li>
+            <li>As the most suitable and simple adjuster(I don't want to use the distance sensor and some other sensors bacause it is not stable.), potentialmeter could be the one for my the circuit. By calculating its number of voltage and the frequency of inital sound, it can certainly change the sound.</li>
+          </div>
+      <div class="page-header">
+        <h1>Step2:Trying to program</h1>
+      </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <li>Firstly, I only add one potentialmeter on my circuit and construct a program for one potentialmeter. The main code is</li>
+             <li>int add_val1 = -200+(int)(analogRead(A0)/2.5)</li>
+             <li>for (int x=0;x smaller than length;x++)</li>
+             <li>tone(outpin,tune[x]+add_val1)</li>
+            <p><li>The code above is realize the function that by rotating the potentialmeter you can change the sound of happy song! Forgiving me, I didn't take a picture of that, but there was a problem here, we had a very strange sound, and the most important thing was that the change wasn't very obvious. We spend a little time solving this stupid problem. Exactly because there was a delay, if we cancel the dealy, there is a continuous change and could be heard clearly.</li></p>
+                <p><li>Solving this problem, we continued our steps. Then, two potentialmeters are necesssary. The code is the same but add some simliar outputs in the program.</li></p>
+                <p><li>However, another problem come up, it can change the frequency at first when there is only one potentialmeter. When there are two potentialmeters, it cannot realize the function as we told before. The function is that we want to rotate different potentialmeters corresponding to each part of the waveform so that it can be a remixer. However, it can only give one sound which controlled by one potential, the other potentialmeter is useless. After dubugging for a long time, we ensure a problem existed in function tone().Then, we get some information.</li></p>
+                <img src=class9tone.png width="600px" height="330px">
+                <p><li>After carefully reading the picture above, we know that the reason is function tone() in arduino can generate only one waveform once. It is impossible for tone() to generate two different waveforms at the same time.</li></p>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="page-header">
+          <h1>Step3:Restruct</h1></div>
+        <div class="col-sm-12">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <li>No matter how the situation changes, we should stick it on! Remixer is the final goal. (Though we make a "Noisy board in the end.")We try to recover our program, the normal happy song must be stayed in the PCB. Since tone() cannot generate different waveform at the same time, what if I let it generate different waveforms one by one with a little delay. Therefore, we restructed the program again.</li><br/><br/>
+                <p>    digitalWrite(7,HIGH);<br/>
+    digitalWrite(4,LOW);<br/>
+    while (digitalRead(2) == 0) {<br/>
+      int add_val1 = -200 + (int)(analogRead(A0) / 2.5);<br/>
+      int add_val2 = -200 + (int)(analogRead(A1) / 2.5);<br/>
+      int add_val3 = -200 +(int)(analogRead(A2) / 2.5);<br/>
+      int now_delay = (int)analogRead(A3) / 5;<br/>
+      tone(outpin,800+add_val1);<br/>
+      delay(now_delay);<br/>
+      noTone(outpin);<br/>
+      tone(outpin2, 1000+add_val2);<br/>
+      delay(now_delay);<br/>
+      noTone(outpin2);<br/>
+      tone(outpin3,1200+add_val3);<br/>
+      delay(now_delay);<br/>
+      noTone(outpin3);<br/>
+    }<br/>
+    noTone(outpin);<br/>
+    noTone(outpin2);<br/>
+    noTone(outpin3);<br/>
+    state = 1;<br/>
+    }<br/>
+    delay(500);<br/>
+  }</p><br/><br/>
+                <p><li>A0,A1,A2,A3 are four inputs for the potentialmeters. The previous three potentialmeters used for changing three different frequencys. The last potentialmeter used for changing the delay, because when we test the effect of the remixer, it just change the frequency, a little bit boring. The most easiest way is to add the input which can control the delay. In term of the different delay, you can make many different effect from this small board.</li></p>
+              </div>
+          </div>
+       <div class="page-header">
+        <h1>Step4:Conclude</h1>
+      </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Question</h3>
+            </div>
+            <div class="panel-body">
+                <li>This is our final circuit.</li>
+                <img src=class9finalcircuit.JPG width="600px" height="500px">
+                <p><li>Named "Noisy board", it is a shame to call it "Remixer", because the sound is too noisy, but you can consider it as a simple DJ board. When you open the project, it will first play the happy song. However, once you push the red button, the alarm light will light up , which alert you now this is noisy mode, and you can rotate the potentialmeters as you want, it will give many many different kinds of noisy bomb! You can use it to wake up your roommate when you must get up early to have a fabolab, but they can sleep until the end of the world!</li></p>
+            </div>
+          </div>
+        <div class="page-header">
+            <h1><a href="The%20standard%20website.html">BACK</a></h1></div>
+        </div><!-- /.col-sm-4 -->
+        </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

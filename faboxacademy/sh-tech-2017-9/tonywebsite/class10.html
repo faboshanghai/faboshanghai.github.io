@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+	      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	  
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/media/theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tony's Fablab</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+    
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Class 10:
+        Build the shape of the final project!</h1>
+        <p>This is the third week, fortunately, we finished the electronic part and were satisfied to it. Now, this is the time to show the techs and skills which we learned in the previous classes.</p>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Tools</h1>
+      </div>
+      <p>
+          <li><button type="button" class="btn btn-lg btn-default">All basic circuit component</button></li>
+      </p>
+        
+     <div class="page-header">
+        <h1>Step1:list all the component you need</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+            <li><div class="panel-body">
+                <p style="margin-left: auto">During the last class, we have made the base for the PCB board.However, if we want to use it to realize some functions , it is impossible to do it without th e circuit component. Thus, we need to list the components we need. The minor reason to list is that all components are very small, in case that we might miss something we need. </p>
+                <img src=class7pic1.JPG width="400px" height="300px">
+                <img src="class7pic2.JPG" width="400px" height="300px">
+                <p>In term of the yellow ticket above, we can see many different symbols of the circuit components such as the capacitor, resistor and so on. By matching all the components to its symbol, we can get the list in the second picture.</p>
+                </div></li>
+          </div>
+      <div class="page-header">
+        <h1>Step2:Solder these components on the board</h1>
+      </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <li>Since we have all the components ready, we can solder the component on the board in term of the position on the tickets</li>
+                <img src="class7pic6.JPG" width="400px" height="330px">
+              <li>Be careful to do this job, because if tin has spread out to somewhere it does not belong to, it will form a shortcut or open circuit, which leads a bug. Therefore, in order to detect this bug, we need to use multimeter to detect whether the circuit is OK.</li>
+                <img src="class7pic4.JPG" width="400px" height="330px">
+                <img src="class7pic5.JPG" width="400px" height="330px">
+             <li>The two picture above is the finished board. How beautiful it is!</li>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="page-header">
+          <h1>Step3:Set the parameter for microcontroller.</h1></div>
+        <div class="col-sm-12">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+            <li>The hardware part is done. Next, we need to use audrino to set some parameters to the microcontroller, which is actually very simple. We just need to connect the board on the computer, open the audrino in order to tell this microcontroller, your name is ATMGA328!The step is necessary, because the microcontoller needs to know what pin it has, the number of pins it has!</li>
+            <li>The final step is to test whether this board is working well. The easilest way is to apply program "blink" on the board!  This is what you will get!</li>
+            <img id="img1" src= "class7pic8.JPG"width="400px" height="350px">
+            <li>The green light is blink in reality, which means all the components on the board are running well!</li>
+>            </div>
+          </div>
+       <div class="page-header">
+        <h1>Step4:Question</h1>
+      </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Question</h3>
+            </div>
+            <div class="panel-body">
+            In this board, we only has two output on it ,green LED and red LED, so what the most complicated function actually we can realize?
+            </div>
+          </div>
+        <div class="page-header">
+            <h1><a href="The%20standard%20website.html">BACK</a></h1></div>
+        </div><!-- /.col-sm-4 -->
+        </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

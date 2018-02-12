@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+	      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	  
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/media/theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tony's Fablab</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+    
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Class 6:
+        Basic for designing a PCB</h1>
+        <p>In this class, we will do something concerned with the electronic--PCB(Printed Circuit Board). However, firstly taking it easy. After figuring out what each component can do, we will initially learn how to "print" the circuit board.</p>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Tools</h1>
+      </div>
+      <p>
+          <li><button type="button" class="btn btn-lg btn-default">PCB printer-SRM-20</button></li>
+      </p>
+        
+     <div class="page-header">
+        <h1>Step1:How printer works?</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+            <li><div class="panel-body">
+                <p style="margin-left: auto">There are many types of PCB printers on market and we use the one without laser. It just work with powerful engineer ,and precise and different screw head to make a exact print on the board.</p>
+                <img src="class6pic3.JPG" width="400px" height="300px">
+                <p>From the picture above, we have a blur view of the printer.</p>
+                </div></li>
+          </div>
+      <div class="page-header">
+        <h1>Step2:Adjust the PCB on the computer</h1>
+      </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+              <li>The pictures below are models of a PCB what we get.</li>
+              <img src="eagles.png" width = "330px" height="330px">
+              <img src= "out.png" width = "330px" height="330px">
+              <img src=class6pic6.png width="330px" height="330px">
+              <li>First picture is the trace we want print on the PCB, but this is not the complete file, we need to design many parameters such as the number of depth and offset on a website called<a href="www.fabmodules.org" target="_blank">www.fabmodules.org</a>. After adjusting these parameters to your ideal number, you can print the button "calculate",  the website will yield a final picture which can be processed by the printer.Well, this is just a model, I still don't know what place for what component, but I will know in the coming class. At that time , I will design a PCB such as this model.</li>
+              <li>Second one is the edge of the PCB board, we can also call it the cutting trace. Third one is the positions of different holes.</li>
+              <img src="class6pic5.png" width="500px" height="300px">
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="page-header">
+          <h1>Step3:Adjust the parameter on the software.</h1></div>
+        <div class="col-sm-12">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+            <li>Firstly, the base need to be installed stably and precisely. Then, we need to make it become a perfect surface, no one would know whether this new base is leveln until we use the SRM-20 to let it become a perfect level. Finishing doing that, the original board can be put on.</li>
+            <img src= "class6pic7.jpg" width="270px" height="200px">
+            <li>What a beautiful plane! Next, let we adjust some parameter on the fabmodules.</li>
+            <img id="img1" src= "class6pic8.jpg"width="300px" height="350px">
+            <li>This is the parameter for the trace. In fact, there is just a little differences between the parameters of trace, hole and edge. Firstly,  we need to ensure the start point is (0,0,0) which is the origin point we set in SRM-20. Next, the offset and the offset overlap can be changed to the satisfying number.(Offset:the number of the parallel trace. Offset overlap:The cover between two parallel paths)</li>
+            <li>After doing that, press "calculate" and save it. Then, open the software control the SRM-20, you will see a operation view like this</li>
+            <img src="class6pic9.jpg" width="330px" height="330px">
+            <li>You set the origin of x and y. Besides, what everyone should remember is that when finishing set the origin of Z, the mill must be turned up to somewhere immediately, which makes it leave the surface at once,  or the mill will be broken by force.</li>
+            <li>Finally, a beautiful PCB can be seen</li>
+            <img src="class6pic10.jpg"
+ width="330px" height="330px"
+>            </div>
+          </div>
+       <div class="page-header">
+        <h1>Step4:Question</h1>
+      </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Question</h3>
+            </div>
+            <div class="panel-body">
+            Actually, when I do the operation, I really forget how to make a perfect surface! This could be a big problem I think.
+            </div>
+          </div>
+        <div class="page-header">
+            <h1><a href="The%20standard%20website.html">BACK</a></h1></div>
+        </div><!-- /.col-sm-4 -->
+        </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+	      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	  
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/media/theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tony's Fablab</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+    
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Class 8:
+        Final project: Starting</h1>
+        <p>In this class, we have learned a little bit knowledge of arduino language, which is needless to say. The most important thing is that we will start our final project-using Shanghaiuno to do something, anything is OK for sure!</p>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Tools</h1>
+      </div>
+      <p>
+          <li><button type="button" class="btn btn-lg btn-default">Shanghaiuno(type-arduino pro or mini)</button></li>
+          <li><button type="button" class="btn btn-lg btn-default">No-source buzzer</button></li>
+          <li><button type="button" class="btn btn-lg btn-default">wire</button></li>
+      </p>
+        
+     <div class="page-header">
+        <h1>Step1:Idea</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+            <li><div class="panel-body">
+                <p style="margin-left: auto">Since we want to do DESIGN something, idea is very important! Arduino actually is a very powerful software, as long as the idea is appeared , it should be realized by the arduino.</p>
+                <img src="class8pic1.png" width = "600px" height="300px">
+                <p>In our group, we are all interested in music. Therefore, we want to do something about music. Since we need to do something better and complex, a Sound checker which can check the whether the key of a sound is standard is suitable.</p>
+                </div></li>
+          </div>
+      <div class="page-header">
+        <h1>Step2:Searching on the Internet</h1>
+      </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <li>Firstly, we need to figure out the logic. If we want to check the key of the sound, we need to set a standard key, frequency is the best choice. Thus, we search the standard frequency on the Internet</li>
+                <img src="class8pic2.png" width="500px" height="330px">
+             <li>And we got this! This is a code named "pitches.h", which made by Brett Hagman who is the author of function tone(). It is easy to understand that NOTE_C1 refer to the frequency of C--33. Then if we can match this frequency to the receiving sound, we can get a very good Sound-checker.</li>
+            <p><li>However, we found that it is difficult to realize this algorithm.
+                The problem is that how can we match the frequency to its own frequency range. For example, we have a sound C, its frequency should be 33, but I have an unstabilized sound whose frequency is 34, how can I let the program know it should be corresponded to key C but not C#?The error is only 1 hz, though we have the algorithm, the device might be more exact!</li></p>
+                <p><li>What's more, we actually don't know how to transform the receiving sound into frequency. </li></p>
+            <img  src="class8pic3.png" width="500px" height="330px">
+            The picture above is the existed component called sound sensor which can be bought on TaoBao, but it can  only give high and low two output when the volume of the sound is bigger than the threhold. Due to these reasons, we restruct our idea.
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="page-header">
+          <h1>Step3:Restruct</h1></div>
+        <div class="col-sm-12">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <li>Actually, it took us a long time to find the standard frequency of every key. We don't want waste our effort, so we reverse our mind. Since we can't make a sound-checker, we can make a sound-laundry which always gives the standard key.</li>
+              </div>
+          </div>
+       <div class="page-header">
+        <h1>Step4:Try</h1>
+      </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Question</h3>
+            </div>
+            <div class="panel-body">
+                <li>It starts at the software part, we don't need many devices.</li>
+                <img src="class8pic4.png" width="600px" height="330px">
+                <li>You can main part of the code, it is not difficult. Tune and beat are all list, which contain the freqency of each key, and the beat of each key. The logic is simple,if there is any function you don't understand you can directly search it on the internet.</li>
+                <p><li>After finishing the compiling , you can connect the board. Therefore we get a initial mode!</li></p>
+                <embed src="class8vid2.mp4" width="500px" height="500px" autostart="false">
+                <p><li>Ok, someone might think it is stupid. However, as a initial mode, it satisfied our command. Then, we want to do something more with the hardware! We have an idea,but we have difficulty realizing it ,we will ask for help in the next class.</li></p>
+            </div>
+          </div>
+        <div class="page-header">
+            <h1><a href="The%20standard%20website.html">BACK</a></h1></div>
+        </div><!-- /.col-sm-4 -->
+        </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
