@@ -97,8 +97,8 @@
 
 
  <div class="page-header">
-        <h1>Biodyes &amp; Biofabrics</h1>
-     <h2 style="color:black; margin-top:0; font-size:23px;">Class four - 17 October 2017</h2>
+        <h1>Computational Couture</h1>
+     <h2 style="color:black; margin-top:0; font-size:23px;">Class six - 31 October 2017</h2>
       </div>
         
         
@@ -108,18 +108,19 @@
 <div class="row">
       
 <div class="col-md-6">
-<h2>Previous growing experiences</h2>
-<p>I was waiting for this week's assignment with great interest. In May 2017 at FABO we had the luck to host <a href="https://www.facebook.com/opentextiles/">Camila Rios</a> from Santiago for a short internship. During this period she conducted an experiment on growing Kombucha and I helped her sourcing the material and setting up the experiment. She produced a thick rectangular piece of Kombcuha that after drying became approximately 2mm thick. After she left the box containing the acid solution and the remaining Kombucha was left unattended in the hot Shanghainese summer for another month, until one day I was cleaning the lab and noiticed that a new layer of Kombucha grew in the box. So I collected it, washed with fresh water and let it dry on a piece of plywood as Camila taught me. It was just a couple of mm thick and after drying it became very thin like paper. It remained in the lab untouched until last week when I made some consideration and experiments: what amaze me is that it is really dry and yet very flexible and resistant. I left it in water for a day, thinking it would dissolve, but it was unaffected and once dried it went back to the previous condition. I'll try to make a new cultivation in the next month, trying to achieve again a very thin layer, as I plan to test it for using as packaging material.
-</p>
+<h2>Tutorial, tutorial, tutorial...</h2>
+<p>To learn Grasshopper, there is no other way but to do tutorials. I tried to wander around with the software, but it is basically impossible to do anything if you don't know a lot of how it works. Its learning curve is very long. Anyway, it repays you in the long run for the amount of things that it lets you do.</p>
+<p>Some tutorials can be found here, and if you have problems understanding some passages in the middle of the night and you are lucky enough to have Aldo Sollazzo's phone number, you can ask him directly as I did many times! In the middle of the night.</p>
+    <li><a href="http://www.grasshopper3d.com/page/tutorials-1">Introduction to Grasshopper Videos by David Rutten</a></li>
 
 </div>
 
 <div class="col-md-6">   
 <div class="thumbnail">
-<a href="image/04image00002.jpg">
-<img src="image/04image00002.jpg" alt="Lights" style="width:100%"> </a>
+<a href="image/06image00018.jpg">
+<img src="image/06image00018.jpg" alt="Lights" style="width:100%"> </a>
 <div class="caption">
-<p>Thin piece of Kombucha left for a day in water, unaffected</p>
+<p>Screenshot from whatsapp. Notice the time.</p>
 </div>
 </div>
     
@@ -128,14 +129,10 @@
 </div>
     
 </div>
-  <div class="row">
-      
-<div class="col-md-12">      
-        <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/Gwm0zbNQgE4?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+        
+        
+        
 
-</div>
-    
-</div>
   
 
         
@@ -146,212 +143,233 @@
         <div class="row">   
 
         
- 
-
-      
-<div class="col-md-6">
-
-<div class="thumbnail">
-<a href="image/04image00004.jpg">
-<img src="image/04image00004.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>Purple sweet potatoes, a common find on Shanghai's fresh markets.</p>
-</div>
-</div></div>
-    
-        
    
         <div class="col-md-6">
-<h2>Bio-dyes: purple sweet potato</h2>
-<p>This autumn I had my first encounter with one of the most amazing food I have tasted and cooked: Purple Sweet Potatoes. Not only they taste and smell incredibly good, they also have the most amazing color I have seen in a kitchen. I knew I wanted to use this vegetable long before the Textile Academy even started.</p><br>
-             <table class="table table-striped">
             
+            
+<h2>3D mask from body scan</h2>
+<p>The definition I made is based on a mesh object, deriving from the body scan I took of myself in the first weeks. I used three plane to cut away a section of my face (I only performed some simple rotations to adjust the position of the head in order to get a symmetrical shape, and I placed the planes "by eye" untile I was satisfied with the resulting "mask" shape). The mesh was then offset by 3mm to give some thickness to the final model.<br><br>The definition is very simple: starting from the mesh, I extract its faces as polygons and I get the center point and niormal vector of each face, then I change the amplitude of the normal vectors and make an extrusion of each face to the second point of the normal vector. This amplitude that regulates the height of the extrusion can be modified by a slider and it can be made negative. I also tried to use different data to change this amplitude, like pollution data, or other data lists, but I failed.</p><br>
+            <p>Then I baked the extrusion and I used it as the outer shell of the mask. I only needed to offset as a solid the basic mesh coming from the 3D scan (again 3mm) and reconnect it with the baked surface (this gave me a solid with 3mm thichness walls, ready to be printed).</p><br>
              
-            
-            <tbody>
-                
-                <tr>
-                <th>Material:</th>
-                <th><a href"https://en.wikipedia.org/wiki/Dioscorea_alata">Dioscorea alata</a></th>
-                <th></th>
-                </tr>
-                
-                <tr>
-                <th>Pigment:</th>
-                <th><a href"https://en.wikipedia.org/wiki/Anthocyanin">Anthocyanin</a></th>
-                <th></th>
-                </tr>
-                
-                <tr>
-                <th>Color:</th>
-                <th>pH &lt; 7</th>
-                <th>red, pink</th>
-                </tr>
-                
-                <tr>
-                <th></th>
-                <th>pH &#126; 7</th>
-                <th>purple</th>
-                </tr>
-                
-                <tr>
-                <th></th>
-                <th>pH &gt; 7</th>
-                <th>greenish-yellow</th>
-                </tr>
-           
-            </tbody>
-          </table>
-</div></div> 
+</div>
+        
+            <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00016.jpg">
+<img src="image/06image00016.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>Elements of the mask model</p>
+</div>
+</div></div>
+        
+        </div> 
                             <!--                            CHAPTER 3-->
         
         
-<div class="row">   
-<div class="col-md-12">
-<h2>Acquiring the materials</h2>
-<p>I wanted to try with both vegetable and animal fiber, so I started searching for "ingredients" on <a href"www.taobao.com">Taobao</a>. Unfortunately I'm sourcing the material week by week as I am still learning and I always experience delays in the delivery and delays in my assignment. Any way, I was able to source all the material I wanted by Sunday and I am now in the process of experimenting, even if delayed. My documentation will keep growing over the next weeks. The list of my materials:<br><li>100% Silk</li><li>100% Cotton (cheesecloth type, as it is raw and food-safe)</li><li>Alum (Mingfan or Baifan in mandarin) as a mordant</li><li>Purple sweet potatoes</li><li>NaHCo3 to clean the cotton</li><li>Lots of H2O</li></p>
-</div></div>         
+      
         
         <div class="row">
       
 <div class="col-md-6">
 
 <div class="thumbnail">
-<a href="image/04image00010.jpg">
-<img src="image/04image00010.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>A bag of Mingfan (Alum powder)</p>
-</div>
+<a href="image/06image00017.jpg">
+<img src="image/06image00017.jpg" alt="Lights" style="width:100%"> </a>
+
 </div></div>
 
 <div class="col-md-6">    
 <div class="thumbnail">
- <a href="image/04image00009.jpg">
-<img src="image/04image00009.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>Believe me it's Alum!</p>
-</div>
+ <a href="image/06image00013.jpg">
+<img src="image/06image00013.jpg" alt="Lights" style="width:100%"></a>
+
 </div></div>
             
             
         
-        </div>  
-        
-        
-             
-        
-  
-        
-                            <!--                            CHAPTER 4-->
-        
-        
-        
-        
-<div class="row">   
-<div class="col-md-8">
-<h2>Extracting the dye</h2>
-<p>The first step is to extract the dye from the potatoes. I made two different batch, one using the skin and one using the peeled potato</p><br>
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Material</th>
-                    <th>Weight</th>
-                <th>Water</th>
-                <th>Cooking Time (<100°)</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Peeled Potato</td>
-                <td>400gr</td>
-                <td>1000ml</td>
-                     <th>15min</th>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Potato skin</td>
-                <td>150gr</td>
-                <td>500ml</td>
-                     <th>15ml</th>
-              </tr>
-           
-            </tbody>
-          </table>
-</div></div>    
-        
-        <div class="row">
-      
-<div class="col-md-6">
-
-<div class="thumbnail">
-<a href="image/04image00003.jpg">
-<img src="image/04image00003.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>Lab setup</p>
-</div>
-</div></div>
-
-<div class="col-md-6">    
-<div class="thumbnail">
- <a href="image/04image00006.jpg">
-<img src="image/04image00006.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>Two pot of hot water, not boiling</p>
-</div>
-</div>
-    
-</div></div>  
+        </div> 
         
                 <div class="row">
       
 <div class="col-md-6">
 
 <div class="thumbnail">
-<a href="image/04image00008.jpg">
-<img src="image/04image00008.jpg" alt="Lights" style="width:100%"> </a>
-<div class="caption">
-<p>Dye from the peeled potato pot. Less water in percentage to the weight of material, and the color is a bright purple (over a white spoon).</p>
-</div>
+<a href="image/06image00014.jpg">
+<img src="image/06image00014.jpg" alt="Lights" style="width:100%"> </a>
+
 </div></div>
 
 <div class="col-md-6">    
 <div class="thumbnail">
- <a href="image/04image00007.jpg">
-<img src="image/04image00007.jpg" alt="Lights" style="width:100%"></a>
-<div class="caption">
-<p>Dye from the potato skin pot. More water in percentage to the weight of material, and the color is a deep purple (over a white spoon).</p>
-</div>
-</div>
-    
-</div></div> 
-        
-        <h2>First considerations</h2>
-<p>The peel contains a lot of dye as the color is more powerful compared to less water used to extract it.</p><br>
-        
-        
-        
-        
-                                <!--                            CHAPTER 5-->
-        
-        
-        
+ <a href="image/06image00015.jpg">
+<img src="image/06image00015.jpg" alt="Lights" style="width:100%"></a>
 
-
-
-       
-        
-        
-        
-        
+</div></div>
             
+            
+        
+        </div>
+        
+        
+        
+           <br><br>
+                <div class="row">   
 
         
+   
+        <div class="col-md-6">
+         
+            
+<h2>Printing and results</h2>
+<p>I printed the model on a makerbot replicator 2 with normal pla. I oriented the object in order to have the "face up" so that I could get a good definition of the "piramids" in the front part. Also using support and having the machine jump from one part to the other all the ime, I knew I would have had a very bad inside surface, so I placed it facing the print bed down. The print took six hours at 0.2mm layer height and I let it go overnight, the amount of support is not too mkuch and I am happy with that because I like to reduce waste. I am pretty happy with the ruslt: it suits my face perfectly as if it was coming from a mold... wait a minute, we could say it is a 3D scan mold! :D</p><br>
+             
+</div>
+        
+            <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00019.jpg">
+<img src="image/06image00019.jpg" alt="Lights" style="width:100%"> </a>
+
+</div></div>
+        
+        </div> 
+                            <!--                            CHAPTER 3-->
         
         
-              
+      
+        
+        <div class="row">
+      
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00005.jpg">
+<img src="image/06image00005.jpg" alt="Lights" style="width:100%"> </a>
+
+</div></div>
+
+<div class="col-md-6">    
+<div class="thumbnail">
+ <a href="image/06image00006.jpg">
+<img src="image/06image00006.jpg" alt="Lights" style="width:100%"></a>
+
+</div></div>
+            
+            
+        
+        </div> 
+        
+                <div class="row">
+      
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00007.jpg">
+<img src="image/06image00007.jpg" alt="Lights" style="width:100%"> </a>
+
+</div></div>
+
+<div class="col-md-6">    
+<div class="thumbnail">
+ <a href="image/06image00008.jpg">
+<img src="image/06image00008.jpg" alt="Lights" style="width:100%"></a>
+
+</div></div>
+            
+            
+        
+        </div>
+        
+                <div class="row">
+      
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00009.jpg">
+<img src="image/06image00009.jpg" alt="Lights" style="width:100%"> </a>
+
+</div></div>
+
+<div class="col-md-6">    
+<div class="thumbnail">
+ <a href="image/06image00010.jpg">
+<img src="image/06image00010.jpg" alt="Lights" style="width:100%"></a>
+
+</div></div>
+            
+            
+        
+        </div> 
+        
+                <div class="row">
+      
+<div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00011.jpg">
+<img src="image/06image00011.jpg" alt="Lights" style="width:100%"> </a>
+
+</div></div>
+
+<div class="col-md-6">    
+<div class="thumbnail">
+ <a href="image/06image00012.jpg">
+<img src="image/06image00012.jpg" alt="Lights" style="width:100%"></a>
+
+</div></div>
+            
+            
+        
+        </div>
+        
+           <br><br>
+        
+                <div class="row">   
+
+        
+   
+        <div class="col-md-6">
+            
+            
+<h2>Print on fabric</h2>
+<p>I also made some experiments with 3D printing on fabric, I tried to print on simple t-shirt cotton with the Makerbot Replicator 2. I first placed the fabric NOT STRETCHED on a sheet of adhesive paper, the kind you use in the vynil cutter, to avoid deformation of the fabric while printing, then I prepared the model adding a little notch of a couple of layers (0,4mm) away from the main area of the print, in this way the actual print will happen a little higher than the printing bed to allow for the thickness of the fabric. Still the printer nozzel has to touch the fabric layer in order to extrude the fused plastic directly into the fibers.</p><br><br><p>he result was good, but it was not elastic at all (I wanted to make a deformable and adaptable mask) and I will go back in the future to this technique as I find it very interesting, maybe using stretchable fabric and elastic filament.</p>
+             
+</div>
+        
+            <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00003.jpg">
+<img src="image/06image00003.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>Adhesive sheet support</p>
+</div>
+</div></div></div>
+                  <div class="row">     
+                       <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00002.jpg">
+<img src="image/06image00002.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>Detail of printing on fabric</p>
+</div>
+</div></div>
+                    
+                       <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/06image00004.jpg">
+<img src="image/06image00004.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>The result print. The pic was taken after some time, I had made some bending tests and tried to heat up the plastic to change its shape, but the result was a failure and I got some of the plastic to delaminate from the fabric.</p>
+</div>
+</div></div>
+        
+        </div> 
+ 
         
         <br>
         
@@ -362,7 +380,17 @@
     <!--FOOTER-->   
 <!--FOOTER-->
     <!--FOOTER-->
-        
+                           <div class="row">
+
+    
+               <div class="col-md-5">
+                   <h2>Files Storage</h2>
+          <div class="thumbnail" style="margin-top:0px">
+              <div class="caption">
+          You can find all files and view, clone or download my website repository at the following address: <a href="https://gitlab.fabcloud.org/saveriosilli/fabricademy-saveriosilli">gitlab.fabcloud.org/saveriosilli</a>
+          </div>
+                   </div></div>
+      </div>
         <br> <div class="row">
             <div class="col-md-12">
         <ul class="list-group">

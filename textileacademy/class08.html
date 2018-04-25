@@ -127,8 +127,8 @@
 <p>I would like to point out the standard pink color as it is branded for girls... If I received it as a gift when I was a kid, I would have been super-happy despite the color of the packaging! Anyway, the structure looks pretty solid and simple, the crank turns easily and smoothly with a nice sound and it looked easy to disassemble... so that's exactly what I did next!</p>
         
         <div class="thumbnail">
-<a href="image/08image00011.png">
-<img src="image/08image00011.png" alt="Lights" style="width:100%"> </a>
+<a href="image/08image00011.jpg">
+<img src="image/08image00011.jpg" alt="Lights" style="width:100%"> </a>
 <div class="caption">
 <p>The advertising images clearly wants only girls to play with it... I DON'T THINK SO!</p>
 </div>
@@ -281,9 +281,190 @@
 </div>
         
         
+             <div class="row">
+    <div class="col-md-8">
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/rLN6YczaANQ?ecver=2" width="640" height="360" frameborder="0" gesture="media" allow="encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+     </div>
+                 </div>
+        
+        <br><br>
+          <div class="row">
+      
+<div class="col-md-8">
+<h2>Refining the electronic</h2>
+<p>I designed and milled a very simple shield with an A4988 stepper driver housing, motor cable connector, a potentiometer and a plug for the external 12V power supply. It can be connected to any Arduino, but here I am using a Shanghaino. Just connect the motor and plugs and turn the potentiometer to change the speed of the machine.</p><br><br>
+    <p>This is the code I'm using, based on the stepper-speed-control example in the stepper library, with minor modifications (I added a "maxspeed" constant that can be set):</p><pre>       
+/*
+
+Knitting Machine motor control
+Upload this sketch to an arduino and use it to change the speed
+of the a stepper motor.
+The circular knitting machine modified for Textile Academy 2017 by Saverio Silli in Shanghai
+use a Shanghaino board and a simple stepper driver shield with a potentiometer.
+
+The motor is attached to digital pins 8 - 9 of the Arduino.
+A potentiometer is connected to analog input 0.
+
+ "The motor will rotate in a clockwise direction. The higher the potentiometer value,
+ the faster the motor speed. Because setSpeed() sets the delay between steps,
+ you may notice the motor is less responsive to changes in the sensor value at
+ low speeds."
+ 
+ Based on:
+ 
+ Stepper Motor Control - speed control
+
+ Created 30 Nov. 2009
+ Modified 28 Oct 2010
+ by Tom Igoe
+
+ */
+
+#include &lt;Stepper.h&gt;
+
+const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
+// for your motor
+const int maxspeed = 400; //maximum speed of the motor
+
+// initialize the stepper library on pins 8 through 11:
+Stepper myStepper(stepsPerRevolution, 8, 9, 10, 11);
+
+int stepCount = 0;  // number of steps the motor has taken
+
+void setup() {
+  // nothing to do inside the setup
+}
+
+void loop() {
+  // read the sensor value:
+  int sensorReading = analogRead(A0);
+  // map it to a range from 0 to maxspeed (you can increase the maximum speed):
+  int motorSpeed = map(sensorReading, 0, 1023, 0, maxspeed);
+  // set the motor speed:
+  if (motorSpeed > 0) {
+    myStepper.setSpeed(motorSpeed);
+    // step 1/100 of a revolution:
+    myStepper.step(stepsPerRevolution / 100);
+  }
+}
+
+</pre></div>
+              
+              <div class="col-md-4">
+<div class="thumbnail">
+<a href="image/08image00018.jpg">
+<img src="image/08image00018.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>The second hat I made, this time using the motor!</p>
+</div>
+</div></div>
+    
+</div>
+       
+        
+    
+                    <div class="row">
+    
+    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/08image00014.jpg">
+<img src="image/08image00014.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>The machine and the shanghaino control</p>
+</div>
+</div></div>
+    
+    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/08image00015.jpg">
+<img src="image/08image00015.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>Shanghaino and stepper speed control shield</p>
+</div>
+</div></div>
+    
+</div>
+        
+                            <div class="row">
+    
+    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/08image00013.jpg">
+<img src="image/08image00013.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>The electronic comoponents</p>
+</div>
+</div></div>
+    
+    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/08image00012.jpg">
+<img src="image/08image00012.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>The stepper speed shield</p>
+</div>
+</div></div>
+    
+</div>
+        
+                            <div class="row">
+    
+    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/08image00016.jpg">
+<img src="image/08image00016.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>The stepper speed shield</p>
+</div>
+</div></div>
+    
+    <div class="col-md-6">
+
+<div class="thumbnail">
+<a href="image/08image00017.jpg">
+<img src="image/08image00017.jpg" alt="Lights" style="width:100%"> </a>
+<div class="caption">
+<p>Stepper speed shield traces</p>
+</div>
+</div></div>
+    
+</div>
+        
+        
+                            <div class="row">
+                                <div class="col-md-8">
+                 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/FLFvZlNGyPs?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div></div>
+  
+</div>
+
+        
+        
         
         
 <br>
+        
+        
+        
+        
+        
+        
+        
+ 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 
 
@@ -292,7 +473,17 @@
     <!--FOOTER-->   
 <!--FOOTER-->
     <!--FOOTER-->
-        
+                           <div class="row">
+
+    
+               <div class="col-md-5">
+                   <h2>Files Storage</h2>
+          <div class="thumbnail" style="margin-top:0px">
+              <div class="caption">
+          You can find all files and view, clone or download my website repository at the following address: <a href="https://gitlab.fabcloud.org/saveriosilli/fabricademy-saveriosilli">gitlab.fabcloud.org/saveriosilli</a>
+          </div>
+                   </div></div>
+      </div>
         <br> <div class="row">
             <div class="col-md-12">
         <ul class="list-group">
